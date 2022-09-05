@@ -1,16 +1,123 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Problem 1 Calculator</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculator</title>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet" />
+  <!-- Stylesheet -->
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: "Roboto Mono", monospace;
+    }
+
+    body {
+      height: 100vh;
+      background: linear-gradient(to bottom, #f9544c 50%, #090c31 50%);
+    }
+
+    .calculator {
+      width: 400px;
+      background-color: black;
+      padding: 50px 30px;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      left: 50%;
+      border-radius: 8px;
+      box-shadow: 0 20px 50px rgba(0, 5, 24, 0.4);
+    }
+
+    .display {
+      width: 100%;
+
+    }
+
+    .display input {
+      width: 100%;
+      padding: 15px 10px;
+      text-align: right;
+      border: none;
+      background-color: transparent;
+      color: #ffffff;
+      font-size: 35px;
+    }
+
+    .display input::placeholder {
+      color: #9490ac;
+      background-color: black;
+
+    }
+
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 5px;
+      margin-top: 20px;
+    }
+
+    .buttons input[type="button"] {
+      font-size: 20px;
+      padding: 17px;
+      border: none;
+      background-color: #808080;
+      color: #ffffff;
+      cursor: pointer;
+
+    }
+
+    input[type="button"][value="AC"] {
+      grid-column: span 2;
+      background-color: red;
+    }
+
+    input[type="button"]#equal {
+      grid-row: span 2;
+      background-color: #15173c;
+    }
+
+    input[type="button"][value="0"] {
+      grid-column: span 2;
+    }
+  </style>
 </head>
 
 <body>
-  Hello world
+  <div class="calculator">
+    <div class="display">
+      <input type="text" placeholder="0" id="input" disabled />
+    </div>
+    <div class="buttons">
+      <!-- Full Erase -->
+      <input type="button" value="AC" id="clear" />
+      <input type="button" value="/" class="input-button" />
+      <input type="button" value="*" class="input-button" />
 
+      <input type="button" value="7" class="input-button" />
+      <input type="button" value="8" class="input-button" />
+      <input type="button" value="9" class="input-button" />
+      <input type="button" value="-" class="input-button" />
+
+      <input type="button" value="6" class="input-button" />
+      <input type="button" value="5" class="input-button" />
+      <input type="button" value="4" class="input-button" />
+      <input type="button" value="+" class="input-button" />
+
+      <input type="button" value="1" class="input-button" />
+      <input type="button" value="2" class="input-button" />
+      <input type="button" value="3" class="input-button" />
+
+      <input type="button" value="=" id="equal" />
+      <input type="button" value="0" class="input-button" />
+      <input type="button" value="." class="input-button" />
+    </div>
+  </div>
+  <!-- Script -->
+  <script src="script1.js"></script>
 </body>
 
 </html>
