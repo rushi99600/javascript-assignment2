@@ -17,13 +17,13 @@
 
     body {
       height: 100vh;
-      background: linear-gradient(to bottom, #f9544c 50%, #090c31 50%);
+      background: gray;
     }
 
     .calculator {
       width: 400px;
       background-color: black;
-      padding: 50px 30px;
+      padding: 40px 30px;
       position: absolute;
       transform: translate(-50%, -50%);
       top: 50%;
@@ -34,30 +34,32 @@
 
     .display {
       width: 100%;
-
     }
 
     .display input {
       width: 100%;
-      padding: 15px 10px;
+      padding: 5px 5px;
+      margin: 5px 5px 30px 20px;
       text-align: right;
       border: none;
-      background-color: transparent;
+      background-color: black;
       color: #ffffff;
       font-size: 35px;
     }
 
     .display input::placeholder {
-      color: #9490ac;
+      color: white;
+      padding: 40px;
       background-color: black;
 
     }
 
     .buttons {
+
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       grid-gap: 5px;
-      margin-top: 20px;
+      margin: 8px -15px -20px -15px;
     }
 
     .buttons input[type="button"] {
@@ -77,7 +79,7 @@
 
     input[type="button"]#equal {
       grid-row: span 2;
-      background-color: #15173c;
+      background-color: #6495ed;
     }
 
     input[type="button"][value="0"] {

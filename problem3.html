@@ -1,15 +1,61 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Problem3 </title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>problem 3</title>
+  <style>
+    body {
+      height: 100%;
+      width: 100%;
+      margin-left: 20%;
+      margin-right: 20%;
+    }
+
+    .container {
+      background-color: rgb(244, 140, 4);
+      width: 50%;
+      height: 100%;
+      text-align: center;
+      padding: 20px;
+      text-transform: capitalize;
+      font-size: 15px;
+      color: white;
+    }
+
+    #seconds #tens {
+      font-size: 2.6rem;
+      color: white;
+    }
+
+    button {
+      background-color: transparent;
+      border-radius: 3px;
+      border: 2px solid white;
+      color: white;
+      width: 20%;
+    }
+
+    button:hover {
+      background-color: white;
+      color: black;
+    }
+  </style>
 
 </head>
 
 <body>
-
+  <div class="container">
+    <h1>Stopwatch</h1>
+    <h1> Javascript StopWatch</h1>
+    <p><span id="seconds">00</span>: <span id="tens">00</span> </p>
+    <button id="button-start">Start</button>
+    <button id="button-stop">Stop</button>
+    <button id="button-reset">Reset</button>
+  </div>
+  <script src=script3.js></script>
 </body>
 
 </html>
